@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>link grabber</title>
+<style type="text/css">
+	body{
+		font-size: 1.5em;
+	}
+	a{
+		margin: 1em;
+		display: block;
+	}
+	input{
+		margin: 1em;
+		padding: 1em;
+	}
+</style>
+</head>
+
+<body>
+
+<input id="input" type="text" name="">
+<a id="anchor" href=""></a>
+
+
+<script type="text/javascript">
+
+var inputEl = document.getElementById("input");
+if ( inputEl ) {
+	inputEl.addEventListener("change", onInputChange);
+	inputEl.addEventListener("input", onInputChange);
+}
+
+function onInputChange(e) {
+
+	var match = inputEl.value.match( /.*(http\S+)/ );
+	if ( match && match.length > 0 ) {
+
+		var url = match[1];
+		anchorEl.setAttribute("href", url);
+		anchorEl.textContent = url;
+	}
+
+}
+onInputChange();
+
+</script>
+</body>
+</html>
