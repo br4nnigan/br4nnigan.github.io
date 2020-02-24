@@ -36,18 +36,19 @@ if ( inputEl ) {
 
 function onFocus(e) {
 	e.target.value = "";
+	onInputChange();
 }
 
 function onInputChange(e) {
 
+	var url = "";
 	var match = inputEl.value.match( /.*(http\S+)/ );
 	if ( match && match.length > 0 ) {
 
-		var url = match[1];
+		url = match[1];
 		anchorEl.setAttribute("href", url);
-		anchorEl.textContent = url;
 	}
-
+	anchorEl.textContent = url;
 }
 onInputChange();
 
