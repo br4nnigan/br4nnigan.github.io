@@ -31,6 +31,11 @@ var inputEl = document.getElementById("input");
 if ( inputEl ) {
 	inputEl.addEventListener("change", onInputChange);
 	inputEl.addEventListener("input", onInputChange);
+	inputEl.addEventListener("focus", onFocus);
+}
+
+function onFocus(e) {
+	e.target.value = "";
 }
 
 function onInputChange(e) {
