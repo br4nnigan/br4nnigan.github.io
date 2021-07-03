@@ -1,3 +1,7 @@
 [submodule "ImageSlider"]
 	path = ImageSlider
 	url = https://github.com/br4nnigan/ImageSlider
+
+[submodule "shittifyjs"]
+	path = shittifyjs
+	url = https://codeberg.org/br4nnigan/shittifyjs
