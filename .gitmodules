@@ -4,4 +4,4 @@
 
 [submodule "shittifyjs"]
 	path = shittifyjs
-	url = https://codeberg.org/br4nnigan/shittifyjs
+	url = https://github.com/br4nnigan/shittifyjs
